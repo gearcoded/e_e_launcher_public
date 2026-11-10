@@ -154,6 +154,12 @@ e_e launcher is intended to be distributed as an APK through GitHub Releases.
 
 Some optional features, such as opening the notification shade or sorting applications by recent usage, require additional Android permissions. These are not necessary for basic launcher functionality.
 
+**Install with Obtainium**
+
+You can also install and update e_e launcher directly from GitHub Releases using [Obtainium](https://github.com/ImranR98/Obtainium).
+
+[Install with Obtainium](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/gearcoded/e_e_launcher_public)
+
 ### Plans for older Android versions
 
 I would like e_e launcher to be available to more devices, including older ones that are still perfectly usable.
