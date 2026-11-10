@@ -1,0 +1,50 @@
+# Local SDK paths and developer IDE state
+local.properties
+.idea/
+*.iml
+
+# Generated Gradle/Kotlin/Android build files
+.gradle/
+.gradle-home/
+.kotlin/
+**/build/
+**/.cxx/
+**/.externalNativeBuild/
+app/release/
+*.apk
+*.aab
+
+# Private signing materials and local environment settings
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.key
+*.pem
+keystore.properties
+secrets.properties
+.env
+.env.*
+*.env
+
+# Logs, diagnostics and operating-system metadata
+*.log
+*.hprof
+.DS_Store
+Thumbs.db
+*_diagnostics/
+apk_audit/
+git_publication_audit/
+release_dependencies.txt
+runtime_license_evidence_*.zip
+e_e_launcher_git_publication_inventory.zip
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Private notes (not part of the public repository)
+docs/internal/
+internal/
+
+# docs/media/ is deliberately tracked: videos and posters are public assets.
