@@ -17,7 +17,7 @@ The final option requires **two confirmations**: first a list of the data to be 
 
 Resetting launcher wallpaper **configuration** does not erase the phone's system wallpaper or the source image files. A selective reset does not remove installed applications or files stored outside e_e launcher. A backup cannot be restored unless it has been saved beforehand.
 
-**Before testing this feature:** The 0.43.0 change is an untested candidate. Verify each reset choice on a nonessential demo configuration, and keep a backup of your actual workspace.
+**Before resetting:** Save a JSON backup of any layout you want to keep. The reset implementation has been through targeted testing, but destructive reset paths and widget restoration can vary across devices; test unfamiliar reset options on a nonessential profile first.
 
 ## Clearing the desktop without resetting preferences
 

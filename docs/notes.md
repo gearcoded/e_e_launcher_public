@@ -14,4 +14,4 @@ Notes are now **real Android AppWidgets** provided by e_e launcher itself (`Laun
 
 - The first-run seed depends on Android granting this launcher permission to bind its own AppWidget provider without a prompt. The app does not silently bypass system widget binding rules. Verify on Motorola and Tecno; if system binding is denied, add notes through the widget picker to trigger the normal permission flow.
 - This iteration intentionally does not migrate the old local Compose-card notes. The user reported having no note content to preserve.
-- The user confirmed repeated widget/note drag and resize persistence in 0.43.5 and JSON note backup/restore in 0.43.6. The new Reset Workspace reseeding in 0.43.7 requires independent on-device confirmation. The build environment cannot produce an Android APK.
+- Earlier device tests confirmed repeated widget/note dragging and resizing in 0.43.5 and JSON note backup/restore in 0.43.6. Ordinary widget operation was also tested in the 0.48.10 baseline. Note-widget ID rebinding and Reset Workspace reseeding were not separately verified in every device scenario; see [tested devices](../TESTED_DEVICES.md).

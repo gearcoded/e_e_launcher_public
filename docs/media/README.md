@@ -13,15 +13,15 @@ All demonstration videos are silent MP4 files encoded with H.264 at **540 × 120
 
 ## GitHub presentation
 
-The README initially links the four posters to their MP4 files in this directory. This is a portable approach with no dependency on an external service. GitHub does **not** reliably turn an ordinary repository-relative MP4 link into an inline player; users open a separate video page or download the file.
+The README links the four posters to their MP4 files in this directory. This is a portable approach with no dependency on an external service. GitHub does **not** reliably turn an ordinary repository-relative MP4 link into an inline player; users open a separate video page or download the file.
 
-If inline playback in GitHub's README is desired after the public repository is created:
+If inline playback in GitHub's README is desired:
 
 1. In a GitHub Markdown editor that accepts attachments (for example an Issue comment), drag in the approved MP4. GitHub will generate an attachment URL like `https://github.com/user-attachments/assets/…`.
 2. Paste the **actual generated URL** into README on its own line (not inside a Markdown table or link). GitHub may render this as a clickable inline player.
 3. Verify the result on the public repository page before replacing the reliable static-poster gallery.
 
-Do not invent attachment URLs or commit a placeholder that resembles a real URL. If you choose this approach, you may remove the duplicate video files from Git history **before the first public commit**, while preserving the static posters. Avoid committing files first and then removing them just to save repository size — Git history keeps committed file contents.
+Do not invent attachment URLs or commit a placeholder that resembles a real URL. The 0.50.0 public tag already contains the four MP4 files; deleting files in a later commit would not remove them from that published tag or existing Git history. Preserve release history and verify the alternative playback experience before changing existing README links.
 
 ## Media and privacy
 

@@ -28,17 +28,11 @@ That's how I arrived at **Effects Environment**.
 
 I like to think of it as a space where different effects can live, interact, and transform the way things look and feel. And, in a sense, it's also an environment that a person can inhabit — a small digital world shaped around their own habits, preferences, and imagination.
 
-**Status:** **0.50.0 (versionCode 184)** is the first-public-release
-**candidate**, based on the well-tested 0.48.10 mainline. The 0.48.10 release
-and rotation tests passed on Motorola Edge 60 (102 orientation changes) and
-Tecno Pova 6 Pro (154 changes), with no new launcher ANRs during either logged
-session. Valid/invalid JSON import, large JPEG backgrounds, widgets and the
-app-drawer image-picker layout were also tested. A Tecno-specific visual gap in
-the drawer background after several cyclic rotations is deferred. The exact
-0.50.0 APK has **not yet been signed or device-tested**: see
-[`RELEASE.md`](RELEASE.md) for the release gate and instructions. The maintainer's
-local Gradle 8.13 Wrapper was verified; apply source updates without replacing
-that JAR.
+**Status:** 0.50.0 (versionCode 184) is the first public stable release, based on the well-tested 0.48.10 mainline. The release APK has been signed and its signature verified. The release was installed and tested on Motorola Edge 60, and an update from 0.48.10 to 0.50.0 was successfully tested on Tecno Pova 6 Pro through Obtainium, with existing settings and workspace layouts preserved.
+
+The 0.48.10 baseline passed rotation stress tests on Motorola Edge 60 (102 orientation changes) and Tecno Pova 6 Pro (154 changes), with no launcher ANRs during either test session. JSON backup and restore, invalid backup handling, large JPEG backgrounds, widgets, and the app-drawer image-picker layout were also tested.
+
+**Known issue:** On Tecno Pova 6 Pro, a rare visual gap may appear in the app-drawer background after repeated cyclic screen rotations. This issue has been deferred to a future release.
 
 ## See it in action
 
@@ -145,9 +139,9 @@ The launcher has been developed and tested on real devices, including the Tecno 
 
 ### Installation
 
-e_e launcher is intended to be distributed as an APK through GitHub Releases.
+Official signed APKs are available through [GitHub Releases](https://github.com/gearcoded/e_e_launcher_public/releases/latest).
 
-1. Download the APK for your Android version from the project's Releases page, once available.
+1. Download the latest APK from the GitHub Releases page (Android 14 or newer).
 2. Allow your browser or file manager to install applications from this source if Android requests permission.
 3. Install the APK and select **e_e launcher** as your default home application.
 4. Customize your workspace, docks, effects, and other settings to suit your preferences.

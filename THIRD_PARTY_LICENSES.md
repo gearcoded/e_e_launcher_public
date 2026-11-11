@@ -24,7 +24,7 @@ Guava under Apache-2.0. See the notices immediately below.
 | kotlinx-coroutines-android | 1.10.2 | Coroutine support |
 | Jetpack Compose BOM | 2025.06.01 | Compose version alignment |
 | Jetpack Compose UI / UI Graphics / Foundation / Material 3 / tooling modules | versions selected by the BOM | User interface and debug tooling |
-| Gradle Wrapper | Gradle 8.13; official JAR SHA-256 verified in maintainer's local working tree on 2026-11-09 | Build bootstrap; previously distributed ZIP snapshots still contain an older mismatched JAR, so ensure that the corrected copy is committed before publishing |
+| Gradle Wrapper | Gradle 8.13; official wrapper JAR SHA-256 verified | Build bootstrap; the wrapper JAR included in this repository was verified against the official Gradle 8.13 distribution. |
 | JetBrains Java Annotations (`org.jetbrains:annotations`) | 23.0.0 (transitive) | Java annotation metadata |
 | JSpecify (`org.jspecify:jspecify`) | 1.0.0 (transitive) | Java nullability annotations |
 | Guava ListenableFuture (`com.google.guava:listenablefuture`) | 1.0 (transitive) | Small standalone ListenableFuture API artifact (not full Guava) |
@@ -165,9 +165,9 @@ provide POM declarations; version-specific Maven metadata was checked
 separately for JSpecify. The scan does **not** prove that all upstream source
 repositories and transformed native payloads are NOTICE-free, or reveal all
 classes in the final signed APK. No additional license or NOTICE document is
-indicated by this local evidence. See
-`docs/release-license-review-0.50.0.md` and
-`docs/release-runtime-license-evidence-0.50.0.md` for the bounded conclusion.
+indicated by this local evidence. The local audit workpapers are not included
+in the public source repository. The conclusions above are limited to the
+artifacts actually inspected.
 
 Source references: https://github.com/JetBrains/java-annotations,
 https://github.com/jspecify/jspecify,
@@ -184,11 +184,12 @@ remain subject to the icon-pack authors' own licenses.
 Apache License 2.0 section 4(d) requires carrying forward the applicable
 attribution text of an **upstream NOTICE file if that work includes one**.
 This conditional requirement is not a requirement to invent a separate NOTICE
-for every Apache-licensed dependency. The local version-specific scan of available resolved JAR/AAR files was
-completed on 2026-11-10: no separate NOTICE file was extracted. The script
-`tools/collect_runtime_license_evidence.py` and its reconciled report are
-available for reproducibility. This is **not** an upstream-source-wide NOTICE
-certification, and it does not assert exhaustive inspection of the final APK.
+for every Apache-licensed dependency. A version-specific scan of locally
+available JAR/AAR artifacts was completed on 2026-11-10; no separate NOTICE
+file was found in the scanned archives. The one-off audit script and working
+reports are not part of this public repository. This is **not** an
+upstream-source-wide NOTICE certification, nor does it establish exhaustive
+inspection of the final APK.
 
 Gradle and compiler plugin licenses are relevant to the **source/build toolchain**;
 the plugins are not automatically bundled into the APK. Likewise JavaScript,

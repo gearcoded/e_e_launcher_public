@@ -50,5 +50,5 @@ signing certificate. See [Building from source](building.md).
 
 Try temporarily disabling visual effects using [Safe Mode](safe-mode.md).
 If the problem goes away, turn effects on again selectively to identify the
-feature involved. The source repository's detailed diagnostic collectors are
-maintainer/developer tools, not required for normal installation.
+feature involved. Detailed diagnostic collection is a maintainer/developer task and is not
+required for normal installation.

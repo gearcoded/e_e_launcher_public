@@ -1,9 +1,12 @@
-## 0.50.0 (versionCode 184) — 2026-11-10 (first-public-release candidate)
+# Changelog
 
-- **Publication candidate:** promotes the maintainer-tested 0.48.10 mainline to the planned 0.50.0 release numbering. No launcher runtime logic, effects, backup serialization, widget implementations, or Android manifest behavior is changed by the version bump.
-- **Validation inherited from 0.48.10:** completed source checks, debug/release compilation, signed APK verification and same-version reinstall, Release smoke test (5/5), JSON backup/error handling tests (3/3), 8000×8000 JPEG background tests, widget functional tests (6/6), and the Motorola/Tecno rotation stress sessions (102/154). The app-drawer picture-selection button layout was confirmed on device after its fix.
-- **License notice correction:** documented Kotlin 2.3.21 standard-library `kotlin.time` ThreeTenBP-derived material and added the upstream BSD 3-clause notice alongside the project's existing GPL-3.0, Apache-2.0, and CC BY-SA 4.0 materials. A separate attribution archive is prepared for the GitHub Release.
-- **Release gate:** this version has **not** yet been built, signed, inspected, or installed on a device. Do not publish until the exact 0.50.0 APK passes those checks and any remaining upstream dependency notices are reviewed. The verified Gradle 8.13 Wrapper in the maintainer's local checkout must be retained; compact update ZIPs do not contain a Wrapper JAR or demonstration videos.
+## 0.50.0 (versionCode 184) — 2026-11-10 (first public stable release)
+
+- **First public release:** published on GitHub on 2026-11-11 from the tested 0.48.10 mainline, with release versionName `0.50.0` and versionCode `184`. The version bump did not change launcher runtime logic, effects, backup serialization, widget implementations, or Android manifest behavior.
+- **Validation of the 0.48.10 baseline:** completed source checks, debug/release compilation, signed APK verification and same-version reinstall, release smoke tests, JSON backup/error handling, 8000×8000 JPEG background tests, widget functional tests (6/6), and rotation stress sessions on Motorola Edge 60 (102 changes) and Tecno Pova 6 Pro (154 changes). The app-drawer picture-selection button layout was confirmed on device after its fix. The rotation counts are for 0.48.10, not a separate 0.50.0 stress test.
+- **Verification of the 0.50.0 release:** the official APK passed package/version, digital-signature, certificate fingerprint, non-debuggable, and non-testOnly verification. The signed release was installed and smoke-tested on Motorola Edge 60. On Tecno Pova 6 Pro, an update from 0.48.10 to 0.50.0 through Obtainium succeeded without losing existing settings or workspace layouts.
+- **Licenses and source distribution:** documented the Kotlin 2.3.21 `kotlin.time` ThreeTenBP-derived material and its BSD 3-clause notice alongside other project and third-party licenses. The first public source snapshot includes the verified official Gradle 8.13 Wrapper JAR. The GitHub Release for tag `v0.50.0` includes a signed APK, the license/attribution ZIP, and `SHA256SUMS.txt`.
+- **Known deferred issue:** on Tecno Pova 6 Pro, repeated cyclic screen rotations can produce a rare app-drawer background gap. This is a visual issue, distinct from the resolved rotation ANR.
 
 ## 0.48.10 (versionCode 183) — 2026-11-09 (rotation ANR candidate)
 
@@ -386,8 +389,6 @@
 - **Flip**, **Rotate** and **Wave** names remain unchanged pending the naming decision: the proposed localized names are Axial flip, Tilt and Sway.
 - Based on user QA of 0.44.0 compilefix v3: eight Pager checks passed, and the three duplicate-comparison checks were skipped. The new scale animation requires device testing. This candidate has not been fully built with Android Gradle in the authoring environment.
 
-# Changelog
-
 ## 0.44.0 — Pager transitions review, stage 1 (test candidate)
 
 - Removed **Fade**, **Stack** and **Depth** from the selectable effects and enum. Existing stored values and older JSON profiles map to Crossfade, Default Pager and Scale respectively, for workspace and app drawer.
@@ -703,8 +704,6 @@
 - Increasing thickness now widens the actual visible body of each ray. It no longer works like extra blur.
 - Blur remains a separate setting and only affects softness/feathering of the beam edges.
 - The beam renderer now draws a solid core plus a narrow blur-dependent halo, so thick rays look wider rather than simply more diffuse.
-
-# e_e launcher changelog
 
 ## 0.37.4
 
@@ -1338,6 +1337,14 @@
 - Allowed widgets to reach the top edge beneath the edit controls.
 - `versionCode = 52`, `versionName = "0.31.1"`.
 
+## 0.31.0
+
+- Added the Android HOME role request through `RoleManager`.
+- Added a skippable first-run welcome screen and safe-mode entry.
+- Added desktop editing and dock modification locks.
+- Added a launcher-wide icon pack choice with system-icon fallback.
+- Included advanced launcher preferences in settings backup and restore.
+
 ## 0.30.0
 
 - Updated fresh-install defaults: system wallpaper, left side dock, five workspace pages with page 3 selected, horizontal app-drawer pages, 80% dialog opacity with shadow, 70% side-dock background, and a 40 dp curved bottom shelf at 20% opacity with shadow.
@@ -1649,13 +1656,3 @@
 ## 0.4.0
 
 - Added movable workspace shortcuts, removal target, page effects, and workspace-count settings.
-# 0.31.0
-
-- Added the Android HOME role request through `RoleManager`.
-- Added a skippable first-run welcome screen and safe-mode entry.
-- Added desktop editing and dock modification locks.
-- Added a launcher-wide icon pack choice with system-icon fallback.
-- Included advanced launcher preferences in settings backup and restore.
-# 0.35.1
-
-- Enabled generation of `BuildConfig` so the current app version can be displayed in launcher settings.

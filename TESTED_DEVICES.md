@@ -42,10 +42,11 @@ Version 0.35.15 also fixes two launcher-side issues exposed during this test:
 ### System-gesture accessibility service
 
 The firmware may disable or temporarily fail to reconnect an accessibility service
-when a development APK is replaced. The app cannot enable this protected setting
-by itself. `tools/install_preserving_accessibility.sh` preserves the service state
-during ADB test installations without overwriting other enabled accessibility
-services.
+when an APK is replaced. The app cannot enable this protected setting by itself.
+If the launcher's optional accessibility actions stop working after an update,
+check Android's Accessibility settings and re-enable the e_e launcher service
+if necessary. Do not overwrite the system's list of enabled accessibility
+services when troubleshooting.
 
 ## Tecno Pova 6 Pro (Android 14)
 
@@ -90,9 +91,9 @@ The user confirmed all five tests of repeated normal/note widget dragging, resiz
 
 The JSON backup/import and domain reset suite passed **14/14** on 0.43.6, including launcher notes' text and sizes, third-party widgets, cross-domain isolation and confirmation cancellation. A design ambiguity was resolved for the next version: Reset Workspace re-creates the welcome layout, while Clear workspace items intentionally removes placed items. These 0.43.7 changes still require their own Android Studio build and device verification.
 
-## Pending 0.44.0 effect QA
+## Historical 0.44.0 effect QA (status at that version)
 
-Pager effect cleanup (Fade/Stack/Depth), stronger Scale, and paired graphics-layer Plane/Card flip have passed source-level checks only. **No device test of 0.44.0 has been reported**. Also carry forward the 0.43.7 folder-drop/reset/clear items for on-device validation.
+At the time of 0.44.0, Pager effect cleanup (Fade/Stack/Depth), stronger Scale, and the graphics-layer Plane/Card flip had only passed source-level checks; no device test of that exact build was reported. Folder drop, reset, and clear-workspace scenarios introduced around 0.43.7 were also awaiting their own validation at that stage. Later releases received additional tests, recorded in the sections below.
 
 
 ## 0.48.5 multi-device acceptance — 2026-11-08
@@ -164,3 +165,17 @@ transport and forced restore rollback remain open items.
 built-in note widget ID with locale/customized flags, OEM cloud/D2D transport,
 and upgrading an installed historical 0.40.0 release. These do not negate
 successful execution of the scenarios listed above.
+
+## 0.50.0 public release verification — 2026-11-10–11
+
+- **Signed APK:** package ID `org.collegiumdesideriorum.e_e_launcher`,
+  `versionName=0.50.0`, `versionCode=184`, valid production signature,
+  non-debuggable and non-testOnly; verified using the repository's APK checker.
+- **Motorola Edge 60:** the signed 0.50.0 release was installed and passed
+  the release smoke test.
+- **Tecno Pova 6 Pro:** the README's Obtainium link detected the published
+  0.50.0 GitHub Release and successfully updated an existing 0.48.10
+  installation in place. Saved settings and workspace layouts were preserved;
+  Obtainium showed matching installed and latest versions afterward.
+- **Test scope:** the separate 102/154-orientation stress tests listed above
+  were conducted on 0.48.10, not repeated specifically on 0.50.0.

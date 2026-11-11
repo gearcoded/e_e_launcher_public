@@ -7,9 +7,11 @@ The project's main introduction and feature overview belong in the repository's
 ## Guides
 
 - [Workspace, pages, and folders](workspace.md)
+- [First-run workspace and app drawer grid](first-run-and-grid.md)
 - [App drawer](app-drawer.md)
 - [Side and bottom docks](docks.md)
 - [Android widgets and resizing](widgets.md)
+- [Built-in text note widget](notes.md)
 - [Page and Environment Effects](effects.md)
 - [Safe Mode](safe-mode.md)
 - [Reset launcher settings](reset-settings.md)
@@ -27,11 +29,12 @@ The project's main introduction and feature overview belong in the repository's
 
 ## Media
 
-The [`media/`](media/) directory in the **Git repository** contains the
-maintainer's selected short video demonstrations, poster images and media
-notes. It is intentionally **omitted from compact source ZIPs** sent during
-development. Do not remove existing repository media when applying an update.
+The [`media/`](media/) directory contains short video demonstrations,
+poster images, and accompanying media notes. These files are tracked in the
+public Git repository and included in source archives generated from release
+tags. Compact archives exchanged during private development may omit them.
 
-This documentation accompanies the mainline **0.50.0** first-public-release
-candidate, based on the tested **0.48.10** baseline. The independently maintained Android 8 and Android 12 ports may
-provide different features.
+This documentation accompanies **e_e launcher 0.50.0 (versionCode 184)**, the
+first public stable release, based on the tested **0.48.10** mainline. The
+independently maintained Android 8 and Android 12 ports may provide different
+features.

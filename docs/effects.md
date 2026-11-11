@@ -18,7 +18,7 @@ the current mainline release requires **Android 14 or newer**. Future versions
 for older Android releases may use different implementations and might not
 produce identical effects.
 
-The Pager review through 0.44.6 removed redundant Fade, Stack, Depth and classic Cube choices, and reworked the graphics-layer Plane/Card flip. Older saved effect IDs are migrated to surviving transitions. Two stationary zoom effects are available: Zoom in and Zoom out. The Pager effects previously called Wave, Rotate and Flip are now displayed in English as Diagonal page swipe, Slanted page swipe and Rotating page swipe; their underlying persisted IDs and animation algorithms are unchanged. The independent icon Wave animation retains its original name. Canvas and Mesh reviews are separate future steps.
+The Pager review through 0.44.6 removed redundant Fade, Stack, Depth and classic Cube choices, and reworked the graphics-layer Plane/Card flip. Older saved effect IDs are migrated to surviving transitions. Two stationary zoom effects are available: Zoom in and Zoom out. The Pager effects previously called Wave, Rotate and Flip are now displayed in English as Diagonal page swipe, Slanted page swipe and Rotating page swipe; their underlying persisted IDs and animation algorithms are unchanged. The independent icon Wave animation retains its original name. Subsequent Compose Canvas and Android Mesh reviews added and refined many more effects; see the [changelog](../CHANGELOG.md) for the recorded changes.
 
 The page-curl/scroll effect has known cosmetic differences from its intended
 appearance; these are tracked as future improvements and do not prevent

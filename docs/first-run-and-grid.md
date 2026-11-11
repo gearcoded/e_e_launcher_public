@@ -1,10 +1,10 @@
-# First-run workspace and app drawer grid (0.43.1 test candidate)
+# First-run workspace and app drawer grid
 
 ## First-run workspace
 
-A genuinely new profile (before the Welcome screen has been completed and without saved desktop items) receives three standalone launcher actions and an accompanying folder on the default third page. The standalone actions are: Environment effects, Workspace effect and Launcher settings. The shortcuts and accompanying folder are placed in the middle/lower part of the page. The folder contains five independent action entries with the same functions, which can be launched or dragged out to desktop shortcuts.
+A genuinely new profile (before the Welcome screen has been completed and without saved desktop items) receives three standalone launcher actions and an accompanying folder on the default third page. The standalone actions are: Environment effects, Workspace effect and Launcher settings. The shortcuts and accompanying folder are placed in the middle/lower part of the page. The folder contains five different actions: Side dock, App drawer, Gestures, App drawer effects, and Wallpaper. They can be launched or dragged out as desktop shortcuts.
 
-Two editable launcher-local welcome notes are placed above the shortcuts on the home page and on the page to its right. See [notes](notes.md).
+Two editable built-in Android note widgets are placed above the shortcuts on the home page and on the page to its right when Android permits the launcher to bind them. See [notes](notes.md).
 
 Updating a configured launcher does not regenerate the demo content or override its current shortcuts/folders.
 
@@ -16,9 +16,9 @@ Changing a column or row count manually persists that dimension; the untouched d
 
 ## Press-to-add
 
-On a long press in an empty portion of the workspace, the launcher records where the gesture occurred. Adding an app, settings shortcut or launcher action via that menu targets that location. A free-position search avoids collision with other shortcuts, folders or widgets on that page. If no long-press location exists, the search begins near the page center. The candidate uses approximate screen-space occupancy to keep additions clear of other items; confirm on devices with very different insets and bottom docks.
+On a long press in an empty portion of the workspace, the launcher records where the gesture occurred. Adding an app, settings shortcut or launcher action via that menu targets that location. A free-position search avoids collision with other shortcuts, folders or widgets on that page. If no long-press location exists, the search begins near the page center. Placement uses a screen-space occupancy check to keep additions clear of other items. Layout should still be checked on devices with unusually large insets or dock configurations.
 
-## Test priorities
+## Suggested regression tests for future versions
 
 - Fresh install vs upgrade with saved custom values
 - Long press near screen edges and near dock, short and long screens
